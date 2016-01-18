@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block stylesheets %}
+        <link href="{{ asset('css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+        <link href="{{ asset('css/style.css')}}" rel='stylesheet' type='text/css' />
+        <link href="{{ asset('css/animate.css')}}" rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    {% endblock %}
+
+    {% block javascripts %}
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!--webfont-->
+        <script type="text/javascript" src="{{ asset('js/jquery-1.11.1.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('js/login.js')}}"></script>
+        <!--Animation-->
+        <script src="{{ asset('js/wow.min.js')}}"></script>
+        <script src="{{ asset('js/jquery.easydropdown.js')}}"></script>
+
+        <script>
+            new WOW().init();
+        </script>
+
+    {% endblock %}
+</head>
+    <body>
+        {% include "::header.html.twig" %}
+
+        {% block body %}
+        {% endblock %}
+
+        {% include "::footer.html.twig" %}
+    </body>
+</html>
